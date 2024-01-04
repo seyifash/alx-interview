@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""pascal triangle question"""
+"""0-pascal_triangle.py"""
 
 def pascal_triangle(n):
+    """pascal triangle question
+    """
     if n <= 0:
         return []
     triangle = [[1]]
