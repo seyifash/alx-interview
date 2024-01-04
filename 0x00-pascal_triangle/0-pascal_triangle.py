@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """0-pascal_triangle.py"""
 
+
 def pascal_triangle(n):
     """pascal triangle question
     """
@@ -14,4 +15,5 @@ def pascal_triangle(n):
             next_row.append(prev_row[i - 1] + prev_row[i])
         next_row.append(1)
         triangle.append(next_row)
+
     return triangle
