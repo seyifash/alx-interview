@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """method to unlock boxes
 """
-def canUnlockAll(boxes):
-    """ A method that checks if all boxes can be unlocked
-    by checking if each box contains keys to another box"""
+
+def can_unlock_all(boxes):
+    """
+    A method that checks if all boxes contains keys to other box
+    """
     if not boxes or not boxes[0]:
         return False
 
