@@ -2,7 +2,8 @@
 """method to unlock boxes
 """
 
-def can_unlock_all(boxes):
+
+def canUnlockAll(boxes):
     """
     A method that checks if all boxes contains keys to other box
     """
