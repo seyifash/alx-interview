@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""method to unlock boxes
+"""
+method to unlock boxes
 """
 
 
