@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-""" 0-minoperations.py
+"""0-minoperations.py
 """
 
 
 def minOperations(n):
-    """this function calculates the minimum number of operations that cna be done
+    """
+    This function calculates the minimum number of operations that cna be done
     """
     if n <= 1:
         return 0
