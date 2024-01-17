@@ -10,10 +10,10 @@ def minOperations(n):
         return 0
     divisor = 2
     num_of_operations = 0
-    while n > 1:
+    while 1 < n:
         if n % divisor == 0:
             n = n / divisor
-            num_of_operations = num_of_operations + divisor
+            num_of_operations += divisor
         else: 
             divisor += 1
             
