@@ -16,7 +16,6 @@ def minOperations(n):
         if n % divisor == 0:
             n = n / divisor
             num_of_operations += divisor
-        else: 
+        else:
             divisor += 1
-            
     return num_of_operations
