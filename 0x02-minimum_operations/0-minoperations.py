@@ -4,7 +4,7 @@ A method to calculate minimum operations
 """
 
 
-def minOperations(n)
+def minOperations(n):
     """
     This function calculates the minimum number of operations that cna be done
     """
