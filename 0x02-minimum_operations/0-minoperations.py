@@ -9,15 +9,16 @@ def minOperations(n):
     if not isinstance(n, int):
         return 0
     
-    current_length = "H"
+    text1 = "H"
     numberOfOp = 0
     
-    while len(current_length) < n:
-        if n % len(current_length) == 0:
-            current_length = current_length + current_length
+    while len(text1) < n:
+        if n % len(text1) == 0:
+            copy = text1
+            text1 = text1 + copy
             numberOfOp += 2
         else:
-            current_length += current_length
+            text1 = copy + text1
             numberOfOp += 1
     
     return numberOfOp 
