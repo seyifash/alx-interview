@@ -4,21 +4,22 @@
 
 
 def minOperations(n):
-    """ this function calculates the minimum nuber of operations that cna be done
+    """ this function calculates the minimum number of operations that cna be done
     """
-    if not isinstance(n, int):
+    if n == 1:
         return 0
-    
-    text1 = "H"
-    numberOfOp = 0
-    
-    while len(text1) < n:
-        if n % len(text1) == 0:
-            copy = text1
-            text1 = copy + text1
-            numberOfOp += 2
-        else:
-            text1 = copy + text1
-            numberOfOp += 1
-    
-    return numberOfOp 
+
+    operations = 0
+    current_h = 1
+    clipboard = 0
+
+    while current_h < n:
+        if n % current_h == 0:
+            # If current_h is a divisor of n, use the copy all and paste operation
+            clipboard = current_h
+            operations += 2
+
+        current_h += clipboard
+        operations += 1
+
+    return operations if current_h == n else 0
