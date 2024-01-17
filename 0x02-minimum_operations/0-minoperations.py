@@ -14,10 +14,11 @@ def minOperations(n):
     
     while len(text1) < n:
         if n % len(text1) == 0:
-            text1 = text1 + text1
+            copy = text1
+            text1 = copy + text1
             numberOfOp += 2
         else:
-            text1 = text1 + text1
+            text1 = copy + text1
             numberOfOp += 1
     
     return numberOfOp 
