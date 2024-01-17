@@ -6,7 +6,7 @@
 def minOperations(n):
     """ this function calculates the minimum nuber of operations that cna be done
     """
-    if n <= 1:
+    if not isinstance(n, int):
         return 0
     
     current_length = "H"
