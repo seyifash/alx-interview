@@ -7,7 +7,7 @@ import sys
 
 # store the count of all status codes in a dictionary
 status_codes_dict = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0,
-                        '404': 0, '405': 0, '500': 0}
+                     '404': 0, '405': 0, '500': 0}
 
 total_size = 0
 count = 0  # keep count of the number lines counted
@@ -39,7 +39,7 @@ try:
             for key, value in sorted(status_codes_dict.items()):
                 if value != 0:
                     print('{}: {}'.format(key, value))
-                    
+
 except Exception as err:
     pass
 
