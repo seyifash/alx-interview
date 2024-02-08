@@ -16,7 +16,7 @@ def validUTF8(data):
     i = 0
     while i < len(data):
         j = isValid(data[i])
-        k = i + j - ( j != 0)
+        k = i + j - (j != 0)
         i += 1
         if j == 1 or j > 4 or k >= len(data):
             return False
