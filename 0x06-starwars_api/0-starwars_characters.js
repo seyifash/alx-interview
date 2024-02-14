@@ -10,8 +10,7 @@ request(url, function (error, response, body) {
   if (error) {
     console.log('ERROR:', error);
   } else {
-    const movieData = JSON.parse(body);
-    const charactersUrl = movieData.characters;
+    const charactersUrl = JSON.parse(body).characters;
     if (charactersUrl.length === 0) {
       return;
     }
