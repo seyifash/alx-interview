@@ -19,7 +19,7 @@ request(url, function (error, response, body) {
     charactersUrl.forEach((characterUrl) => {
       request(characterUrl, function (error, response, body) {
         if (error) {
-          console.error('Error:', error);
+          console.error('error:', error);
         }
         const characterData = JSON.parse(body);
         console.log(characterData.name);
