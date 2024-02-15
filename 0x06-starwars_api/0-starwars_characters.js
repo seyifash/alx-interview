@@ -2,25 +2,28 @@
 
 const request = require('request');
 
-function sendRequest (movieId) {
-  const filmUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}/`;
+const movieId = process.argv[2];
 
-  request(filmUrl, (error, response, body) => {
-    if (!error && response.statusCode === 200) {
-      const film = JSON.parse(body);
-      const charactersUrls = film.characters;
+const url = 'https://swapi-api.alx-tools.com/api/films/';
 
-      charactersUrls.forEach(characterUrl => {
-        request(characterUrl, (error, response, body) => {
-          if (!error && response.statusCode === 200) {
-            const character = JSON.parse(body);
-            console.log(character.name);
-          }
-        });
-      });
+function sendRequest (array, i) {
+  if (i === array.length) {
+    return;
+  }
+
+  request(array[i], function (err, response1, body) {
+    if (!err) {
+      console.log(JSON.parse(body).name);
+      sendRequest(array, i + 1);
     }
   });
 }
 
-const movieId = process.argv[2];
-sendRequest(movieId);
+request(url + movieId, function (error, response, body) {
+  if (error) {
+    console.log(error);
+  } else {
+    const url2 = JSON.parse(body).characters;
+    sendRequest(url2, 0);
+  }
+});
