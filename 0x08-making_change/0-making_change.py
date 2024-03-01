@@ -6,6 +6,8 @@ def makeChange(coins, total):
     """calculates fewest coins to get total."""
     if total <= 0:
         return 0
+    if coins == [] or coins is None:
+        return -1
     coins.sort(reverse=True)
     index = 0
     value = 0
