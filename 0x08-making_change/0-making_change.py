@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""coins module"""
 
 
 def makeChange(coins, total):
-
+    """calculates fewest coins to get total."""
     if total <= 0:
         return 0
     coins.sort(reverse=True)
