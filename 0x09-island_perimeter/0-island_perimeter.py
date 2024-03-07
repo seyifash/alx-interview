@@ -6,7 +6,7 @@ A method that calculates the perimeter of an island
 
 def island_perimeter(grid):
     """This method calcultes the island of a perimeter"""
-    if grid == None or len(grid) == 0:
+    if grid is None or len(grid) is 0:
         return 0
     result = 0
 
